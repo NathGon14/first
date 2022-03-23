@@ -1,0 +1,10 @@
+//Modules
+const moduleNames = require("./names.js")
+const moduleNamesFunction = require("./namesFunction.js")
+const dataAl = require('./alter6.js')
+moduleNamesFunction.sayHi("betina")
+moduleNamesFunction.sayHi(moduleNames.cam)
+moduleNamesFunction.sayHi(moduleNames.cua)
+moduleNames.func(moduleNames.cam)
+console.log(dataAl.items[0])
+require('./mindGrenade7.js')

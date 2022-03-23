@@ -1,0 +1,47 @@
+const {readFile, writeFile, write} = require('fs')
+
+
+readFile('./subfolder/first.txt','utf8',(err,result)=>
+{
+if(err){
+
+    console.log(err)
+    return
+}
+console.log("1");
+const first = result;
+readFile('./subfolder/second.txt','utf8',(err1,res1)=>{
+    if(err){
+
+        console.log(err1)
+        return
+
+    }
+    console.log("2");
+    const second = res1;
+
+    writeFile("./subfolder/resultAgain.txt",`\nhere is the new reult ${first} ${second}`,{flag: 'a'},(err,res)=>{
+        console.log(err);
+        console.log("3");
+    })
+
+   
+
+})
+
+
+
+
+}
+
+)
+console.log("4");
+
+
+
+
+
+
+
+
+
